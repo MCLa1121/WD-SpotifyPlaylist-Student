@@ -250,6 +250,21 @@ function buildPlaylist() {
         this.src = "https://placehold.co/60x60?text=Music";
       };
 
+      //create a <span> with the song title as its text
+      const titleSpan = document.createElement("span");
+      titleSpan.textContent = song.title;
+
+      //create a <span> with className "remove-hint" and text "click to remove"
+      const removeHintSpan = document.createElement("span");
+      removeHintSpan.className = "remove-hint";
+      removeHintSpan.textContent = "click to remove";
+
+      //append the img and both spans to the row, then append the row to `container`
+      row.appendChild(img);
+      row.appendChild(titleSpan);
+      row.appendChild(removeHintSpan);
+      container.appendChild(row);
+
 
     /* =====================================================
        DEV TEAMS — STEP 9: DOM Element Removal on Click
