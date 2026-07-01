@@ -336,6 +336,18 @@ function buildPlaylist() {
 
      YOUR CODE GOES HERE:
      ===================================================== */
+      function updateMilestone() {
+        const milestones = [
+          { count: 1, message: " First song cleared!" },
+          { count: 2, message: " Two songs cleared!" },
+          { count: 3, message: " Three songs cleared!" },
+          { count: 4, message: " Full playlist cleared!" },
+        ];
 
-
-}
+        //check each milestone
+        milestones.forEach(function(milestoneObj){
+          if(songsRemovedCount === milestoneObj.count){
+            milestone.textContent = milestoneObj.message;
+          }
+        });
+      }
