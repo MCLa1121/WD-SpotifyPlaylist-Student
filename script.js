@@ -209,7 +209,8 @@ function buildPlaylist() {
 
      YOUR CODE GOES HERE:
      ===================================================== */
-
+     songs.forEach(function(song){
+    
 
 
     /* =====================================================
@@ -235,7 +236,19 @@ function buildPlaylist() {
 
        YOUR CODE GOES HERE:
        ===================================================== */
+      //create a <div> with className "song-row"
+      const row = document.createElement("div");
+      row.className = "song-row";
 
+      //create an <img> — set its src to song.cover and alt to song.title
+      const img = document.createElement("img");
+      img.src = song.cover;
+      img.alt = song.title;
+
+      //add image fallback protection, so if the image fails to load, set this.src to the below url
+      img.onerror = function () {
+        this.src = "https://placehold.co/60x60?text=Music";
+      };
 
 
     /* =====================================================
