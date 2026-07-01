@@ -118,7 +118,7 @@ function buildPlaylist() {
      3. Write an if / else if that assigns `songs` based on
         the mode
      ===================================================== */
-    const mode = modeSelector.value;
+  const mode = modeSelector.value;
 
     //this variable hold the final song we want to show 
     let songs;
@@ -130,7 +130,7 @@ function buildPlaylist() {
     //if the user choose the full session, use all songs 
     else if(mode == "fullSession"){
       songs = allSongs;
-    }
+    }  
 
 
   /* =====================================================
@@ -176,6 +176,22 @@ function buildPlaylist() {
 
      YOUR CODE GOES HERE:
      ===================================================== */
+     //clear the previous playlist
+      container.innerHTML = "";
+
+      //reset songsRemovedCount to 0 and clear milestone text
+      songsRemovedCount = 0;
+      milestone.textContent = "";
+
+      //check if songs.length === 0
+      if(songs.length === 0){
+        feedback.textContent = "No songs found for this mood.";
+        feedback.className = "feedback-box error";
+      }
+      else{
+        feedback.textContent = `${songs.length} songs loaded for this mood.`;
+        feedback.className = "feedback-box success";
+      }
 
 
 
