@@ -292,6 +292,21 @@ function buildPlaylist() {
 
        YOUR CODE GOES HERE:
        ===================================================== */
+       //when the user clicks on the row, add the CSS class "removing" to the row
+       row.addEventListener("click", function(){
+        row.classList.add("removing");
+
+        //after a short delay, remove the row from the DOM
+        setTimeout(function(){
+          row.remove();
+        }, 200);
+
+        //increment songsRemovedCount
+        songsRemovedCount++;
+
+        //call updateMilestone() if a user reaches a milestone
+        updateMilestone();
+       });
 
 
 
