@@ -307,11 +307,7 @@ function buildPlaylist() {
         //call updateMilestone() if a user reaches a milestone
         updateMilestone();
        });
-
-
-
-  // (Make sure your Step 7 loop closes here.)
-
+     }); // Step 7 loop closes here
 
   /* =====================================================
      DEV TEAMS — STEP 10: Milestone Tracking (Bonus pattern)
@@ -351,3 +347,4 @@ function buildPlaylist() {
           }
         });
       }
+    };
