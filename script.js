@@ -118,7 +118,19 @@ function buildPlaylist() {
      3. Write an if / else if that assigns `songs` based on
         the mode
      ===================================================== */
+    const mode = modeSelector.value;
 
+    //this variable hold the final song we want to show 
+    let songs;
+
+    //if the user choose quick play, only use the first 3 songs
+    if(mode == "quickPlay"){
+      songs = allSongs.slice(0,3);
+    }
+    //if the user choose the full session, use all songs 
+    else if(mode == "fullSession"){
+      songs = allSongs;
+    }
 
 
   /* =====================================================
